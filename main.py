@@ -73,42 +73,45 @@ class Main:
     """
     def register():
         print("\nCreate new account")
-        username=input("Enter new password: ")
+        username=input("Enter username: ")
         password=input("Enter new password: ")
         c_password=input("Confirm your password: ")
         if password==c_password:
-            user=user(username,password)
+            user=User(username,password)
             users.append(user)
             Main.login()
         else:
-            print("password do not match")
-            Main.register()
-    
+            print("passwords do not match")
+            Main.register() 
+        
+            
     def login():
         print("\nLogin to your account")
         users.append(User("admin","admin"))
-        username=input("Enter your username: ")
-        password=input("Enter your password: ")
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
         for x in users:
             if x.username==username and x.password==password:
+                Credentials.new()
             else:
                 print("Invalid login attempt")
                 Main.login()
     """
-    naigate user either to register or login
+    navigate user either to register or login
     """
-    def navigate(x):
+            
+    def navigate (x):
         if x=="1":
-            Main.register
+            Main.register()
         elif x=="2":
             Main.login()
         elif x=="3":
             exit()
         else:
-            print(invalid password)
-print("Welcome to password locker")
-print("Select an option to continue")
-print("1.Register\n2.Login\3.Exit")
+            print ("invalid password")
+    
+print ("Welcome to Password Locker")
+print ("Select an option to continue")
+print ("1.Register\n2.Login\n3.Exit") 
 option=input()
-Main.navigate(option)
-         
+Main.navigate(option)      
