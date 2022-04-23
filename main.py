@@ -67,3 +67,30 @@ class Credentials:
         else: 
             print("invalid option")
 
+class Main:
+    """
+    authenticate user on app
+    """
+    def register():
+        print("\nCreate new account")
+        username=input("Enter new password: ")
+        password=input("Enter new password: ")
+        c_password=input("Confirm your password: ")
+        if password==c_password:
+            user=user(username,password)
+            users.append(user)
+            Main.login()
+        else:
+            print("password do not match")
+            Main.register()
+    
+    def login():
+        print("\nLogin to your account")
+        users.append(User("admin","admin"))
+        username=input("Enter your username: ")
+        password=input("Enter your password: ")
+        for x in users:
+            if x.username==username and x.password==password:
+            else:
+                print("Invalid login attempt")
+                Main.login()
