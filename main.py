@@ -94,3 +94,21 @@ class Main:
             else:
                 print("Invalid login attempt")
                 Main.login()
+    """
+    naigate user either to register or login
+    """
+    def navigate(x):
+        if x=="1":
+            Main.register
+        elif x=="2":
+            Main.login()
+        elif x=="3":
+            exit()
+        else:
+            print(invalid password)
+print("Welcome to password locker")
+print("Select an option to continue")
+print("1.Register\n2.Login\3.Exit")
+option=input()
+Main.navigate(option)
+         
