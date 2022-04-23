@@ -82,8 +82,7 @@ class Main:
             Main.login()
         else:
             print("passwords do not match")
-            Main.register() 
-        
+            Main.register()         
             
     def login():
         print("\nLogin to your account")
