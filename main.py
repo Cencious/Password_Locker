@@ -21,4 +21,8 @@ class Credentials:
         self.site=site
         self.username=username
         self.password=password
+    def new():
+        print("\nSelect an option to continue")
+        print("1.New credentials\n2.Existing credentials\n3.Vie credentials\n4.Delete credentials")
+        option=input()
     
