@@ -14,7 +14,7 @@ By Kakan Innoncencia
 ## Behaviour Driven Development
 - User can create a password locker account with their details, a login username and a self /auto generated password.
 - User can store already existing account credentials.
-- User can Add new credentials, View existing credentials, and delete credentials not in need of.
+- User can Add new credentials, View existing credentials,log into existing credentials and delete credentials not in need of.
 - 
 
 ## Technologies Used
