@@ -25,7 +25,7 @@ def test_user(self):
 def test_credential(self):
         self.assertEqual(self.cred.site,"facebook")
         self.assertEqual(self.cred.username,"cencious")
-        self.assertEqual(self.cred.password,"1989")
+        self.assertEqual(self.cred.password,"1990")
 def test_register(self):
         user=User("cencious","2022")
         users.append(user)

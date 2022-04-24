@@ -25,6 +25,7 @@ class Credentials:
         print("\nSelect an option to continue")
         print("1.New credentials\n2.Existing credentials\n3.View credentials\n4.Delete credentials")
         option=input()
+
         if option=="1":
             print("\nAdd the new account to the password manager: ")
             site=input("Enter site name: ")
@@ -33,14 +34,17 @@ class Credentials:
             selection=input()
             if selection=="1":
                 password=str(random.randint(1000000,9999999))
+
             elif selection=="2":
                 password=input("Enter password: ")
+
             else:
                 print("Invalid option")
             credential=Credentials(site, username, password)
             credentials.append(credential)
             print("Added successfully")
             Credentials.new()
+
         elif option=="2":
             print("\nAdd the existing account to the password manager:")
             site=input("Enter site name: ")
@@ -50,6 +54,7 @@ class Credentials:
             credentials.append(credential)
             print("Added successfully")
             Credentials.new()
+
         elif option=="3":
             print("\nView accounts in password manager: ")
             for x in credentials:
@@ -57,8 +62,8 @@ class Credentials:
                 print("username: " + x.username)
                 print("password: " + x.password)
             Credentials.new()
-        elif option=="4":
-            
+
+        elif option=="4":            
             print("\nEnter the name of the site you want to delete: ")
             name=input()            
             for i, o in enumerate(credentials):
@@ -111,7 +116,7 @@ class Main:
             exit()
         else:
             print ("invalid password")
-    
+        
 print ("Welcome to Password Locker")
 print ("Select an option to continue")
 print ("1.Register\n2.Login\n3.Exit") 
