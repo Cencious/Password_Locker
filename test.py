@@ -5,6 +5,11 @@ credentials=[]
 
 class TestMain(unitest.TestCase):
     def setup(self):
+        """
+        Test class that defines test cases for the main class behavious.
+        Args:
+        unitest.TestCase: Testcase class that helps in creating test cases.
+        """
         self.user=User("Cencious", "2022")
         self.cred=Credentials("facebook","dhonne","1989")    
     def test_user(self):
