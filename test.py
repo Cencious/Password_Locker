@@ -14,6 +14,13 @@ class TestMain(unitest.TestCase):
         self.assertEqual(self.cred.site,"facebook")
         self.assertEqual(self.cred.username,"cencious")
         self.assertEqual(self.cred.password,"1989")
+    def test_register(self):
+        user=User("cencious","2022")
+        users.append(user)
+        self.assertEqual(len(users),1)
+
+    if __name__=="__main__":
+        unitest.main()  
 
    
 
